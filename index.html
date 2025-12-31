@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartment Room Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<!-- PDF Generation Libraries have been moved to the importmap -->
+
+<style>
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #print-area, #print-area * {
+      visibility: visible;
+    }
+    #print-area {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+    .no-print {
+      display: none !important;
+    }
+    @page {
+      margin: 1cm;
+    }
+  }
+</style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "jspdf": "https://cdn.skypack.dev/jspdf@2.5.1",
+    "html2canvas": "https://cdn.skypack.dev/html2canvas@1.4.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/apartment_room_track/assets/index-CFkCGRSQ.js"></script>
+</head>
+  <body class="bg-slate-50 dark:bg-slate-900">
+    <div id="root"></div>
+  </body>
+</html>
